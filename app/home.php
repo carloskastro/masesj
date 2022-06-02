@@ -25,8 +25,34 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">	
 </head>
 <body>
-	<h3>Bienvenido</h3>
+	<?php
+	require_once 'conn.php';
+	session_start();
+
+	if (isset($_SESSION['aprendiz'])) {
+		$search=$conn->prepare('SELECT * FROM aprendiz WHERE idaprendiz=?');
+		$search->bindparam(1,$_SESSION['aprendiz']);
+		$search->execute();
+
+		$data=$search->fetch(PDO::FETCH_ASSOC);
+
+		$user=null;
+
+		if (count($data)>0) {
+			$user=$data;
+		}
+
+		if (!empty($user)) { //comprobar que la variable $user contega información
+	?>
+	<h3>Bienvenido <?php echo $user['nombre']; ?></h3>
 	<a href="logout">Salir</a>
+
+	<?php
+	}
+	}else{
+		header('location: ./');
+	}
+	?>
 	
 </body>
 </html>

@@ -49,12 +49,7 @@
 		}else{
 			echo "Usuario incorrecto";
 		}
-
 	}
-
-
-
-
 	?>
 
 	<div class="container login">
