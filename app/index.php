@@ -68,7 +68,7 @@
 				<form action="" method="post" enctype="application/x-www-form-urlencoded" class="was-validated">
 					<div class="mb-3 mt-3">
 						<label for="uname" class="form-label">Usuario:</label>
-						<input type="text" class="form-control" id="user" placeholder="Ingrese su usuario" name="user" required>
+						<input type="text" class="form-control" id="user" placeholder="Ingrese su usuario" name="user" required autofocus>
 						<div class="valid-feedback">Validado.</div>
 						<div class="invalid-feedback">Campo vacio</div>
 					</div>
