@@ -61,10 +61,7 @@
 				<strong>Success!</strong> <?php echo $msg; ?>.
 			</div>
 
-
-			<?php
-			}
-			?>
+			<?php }	?>
 			
 			<div class="card" style="border-radius: 2.25rem;background-color: #ffffffdb;">
 				<div class="card-body">
